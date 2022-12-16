@@ -14,30 +14,30 @@ export class Cat extends Component {
 
 	information = {
 		about:
-			"Aute voluptate qui eiusmod pariatur velit velit fugiat laborum irure veniam. Id labore proident mollit nostrud. Aliqua excepteur Lorem in duis.",
+			"Mi nombre es Elias Costilla, tengo 24 años, soy un desarrollador web junior y me recibí de Técnico Electromecánico en 2018, mi pasión es la música y el deporte competitivo, me dedico a dar soporte técnico y en mis tiempo libres hago reparaciones de hardware en mi taller.",
 		education:
-			"Quis ut voluptate irure est. Ex in velit nisi nostrud occaecat ipsum non quis ea. Ipsum deserunt est amet adipisicing sint nulla quis nostrud. Ullamco enim do incididunt amet elit qui sint excepteur sit irure elit reprehenderit qui excepteur. Laborum ea minim aliquip et laboris aliquip reprehenderit sunt cupidatat pariatur esse do. In sint magna laborum culpa officia cillum ex velit commodo. Laborum adipisicing laboris incididunt nulla aliquip.",
+			"Estudié en la Escuela Técnica N° 1 de la localidad de La Unión en la provincia de Buenos Aires, Argentina. Me recibí de Técnico Electromecánico en 2018. Actualmente estoy estudiando la carrera de Tecnicatura Universitaria en Programación en la Universidad Nacional de Almirante Brown, Argentina. Soy Técnico en dipositivos electrónicos inteligentes, me recibi en 2018 en el CFP N° 402 Ing. Franco Speranza de la Localidad de Spegazzini, Provincia de Buenos Aires, Argentina.",
 		projects: [
 			{
-				projectName: "p1",
-				liveDemo: "https://github.com/shloksomani",
-				linkToGithub: "https://github.com/shloksomani"
+				projectName: "Generador de ciudades en blender",
+				liveDemo: "https://github.com/bertolucci1/template-generador-de-ciudades-blender",
+				linkToGithub: "https://github.com/bertolucci1/template-generador-de-ciudades-blender"
 			},
 			{
-				projectName: "p2",
-				liveDemo: "https://github.com/shloksomani",
-				linkToGithub: "https://github.com/shloksomani"
+				projectName: "Sistema Dinamico de Parkour",
+				liveDemo: "https://github.com/bertolucci1/Dynamic-Parkour-System",
+				linkToGithub: "https://github.com/bertolucci1/Dynamic-Parkour-System"
 			}
 		],
 		social: [
 			{
 				platform: "Github",
-				link: "https://github.com/shloksomani"
+				link: "https://github.com/bertolucci1"
 			},
 
 			{
-				platform: "Github",
-				link: "https://github.com/shloksomani"
+				platform: "Linkedin",
+				link: "https://ar.linkedin.com/in/eliascostillacovey"
 			}
 		]
 	};
@@ -80,9 +80,9 @@ export class Cat extends Component {
 			} else if (
 				lower === "socials" ||
 				lower === "social" ||
-				lower === "contact me" ||
-				lower === "contactme" ||
-				lower === "contact_me"
+				lower === "contacto" ||
+				lower === "contact" ||
+				lower === "contacta"
 			) {
 				return (
 					<React.Fragment>
@@ -92,7 +92,7 @@ export class Cat extends Component {
 									<a href={everySocial.link} target="_blank">
 										{everySocial.platform}
 									</a>
-									<a href="https://github.com/shloksomani" target="_blank">
+									<a href="https://github.com/bertolucci1" target="_blank">
 										<img src={githubLogo} alt="GithubLink to Code" />
 									</a>
 								</p>
@@ -101,10 +101,10 @@ export class Cat extends Component {
 					</React.Fragment>
 				);
 			} else {
-				return <p className="result">Opps wrong input</p>;
+				return <p className="result">La opcion ingresada es invalida</p>;
 			}
 		} else {
-			return <p className="result">Opps wrong input</p>;
+			return <p className="result">La opcion ingresada es invalida</p>;
 		}
 	};
 }

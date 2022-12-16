@@ -8,7 +8,7 @@ export class Page extends Component {
 		displayEverything: [{ value: "", id: 0, displayInput: true, type: "line" }]
 	};
 	information = {
-		name: "dummy_name",
+		name: "Elías Costilla",
 		commands: [
 			{
 				id: 10,
@@ -46,7 +46,7 @@ export class Page extends Component {
 			},
 			{
 				id: 18,
-				type: "Contact_Me.txt"
+				type: "Contact.txt"
 			}
 		]
 	};
@@ -55,8 +55,8 @@ export class Page extends Component {
 			<div className="container">
 				<div className="terminal">
 					<p className="prompt">
-						Hey there! This is a portfolio website for {this.information.name}.
-						For basic commands type cmd
+						Portfolio interactivo de {this.information.name}.
+						Para ver los comandos disponibles, escribe "cmd". Para acceder al contenido escribe "cat" y luego el nombre del archivo, ejemplo: "cat About.txt".
 					</p>
 
 					{this.state.displayEverything.map(l => {
