@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-terminal-portfolio/precache-manifest.d6f90f9b9e3b3b0ec8c9e831798d5076.js"
+  "/Portfolio-template-terminal/precache-manifest.0276febf7e7e54a0e423d90a5a3ca0b5.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/react-terminal-portfolio/index.html", {
+workbox.routing.registerNavigationRoute("/Portfolio-template-terminal/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
