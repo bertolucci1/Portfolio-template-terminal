@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NewLine from "./newLine";
 import Ls from "./ls";
-import Cat from "./cat";
+import Cat from "./Cat";
 export class Page extends Component {
 	state = {
 		numberOfLine: 0,
@@ -24,29 +24,29 @@ export class Page extends Component {
 			},
 			{
 				id: 13,
-				type: "cmd"
+				type: "Help"
 			}
 		],
 		subDir: [
 			{
 				id: 14,
-				type: "About.txt"
+				type: "cat About"
 			},
 			{
 				id: 15,
-				type: "Education.txt"
+				type: "cat Education"
 			},
 			{
 				id: 16,
-				type: "Projects.txt"
+				type: "cat Projects"
 			},
 			{
 				id: 17,
-				type: "Socials.txt"
+				type: "cat Socials"
 			},
 			{
 				id: 18,
-				type: "Contact.txt"
+				type: "cat Contact"
 			}
 		]
 	};
@@ -55,8 +55,8 @@ export class Page extends Component {
 			<div className="container">
 				<div className="terminal">
 					<p className="prompt">
-						Portfolio interactivo de {this.information.name}.
-						Para ver los comandos disponibles, escribe "cmd". Para acceder al contenido escribe "cat" y luego el nombre del archivo, ejemplo: "cat About.txt".
+						Portfolio de {this.information.name}.
+						Para ver comandos disponibles escriba "help" luego presione Enter.
 					</p>
 
 					{this.state.displayEverything.map(l => {
@@ -73,7 +73,7 @@ export class Page extends Component {
 							return (
 								<Ls key={l.id} line={l} subDir={this.information.subDir}></Ls>
 							);
-						} else if (l.type === "cmd") {
+						} else if (l.type === "help") {
 							return (
 								<Ls key={l.id} line={l} subDir={this.information.commands}></Ls>
 							);
